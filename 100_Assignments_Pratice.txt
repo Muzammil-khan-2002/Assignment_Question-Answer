@@ -1,0 +1,247 @@
+________________________________________________________________________________________
+Q1   :   Chef 
+-----------------------------------------------------------------------------------------
+Code:
+import java.util.*;
+public class ChefQ1
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner(System.in);
+		int choice=0;
+		String result="";
+		do
+		{
+			System.out.println("(One) 1-Process.");
+			System.out.println("(Zero) 0-Terminate");
+			System.out.println("Enter Choice");
+			choice=xyz.nextInt();
+			switch(choice)
+			{
+				case 1:{
+						System.out.println("Enter First CAB Charge?\t");
+						int cab1=xyz.nextInt();
+						System.out.println("Enter Second CAB Charge?\t");
+						int cab2=xyz.nextInt();
+						result=(cab1==cab2)?"Both CAB have Same Charge, Any":(cab1>cab2)?"CAB-II Is Cheaper.":"CAB-I Is Cheaper";
+						}
+						break;
+				default:{
+							System.out.println("Invalid Input!");
+						}
+						break;
+			}
+			System.out.println(result);
+		}while(choice!=0);
+	}
+}
+
+____________________________________________________________________________________________________
+Q2   :   TV Remote
+----------------------------------------------------------------------------------------------------
+Code	:
+import java.util.*;
+public class TVRemoteQ2
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner(System.in);
+		System.out.println("Enter Current Volum of TV?\t");
+		int currentV=xyz.nextInt();
+		if(currentV<=100)
+		{
+		System.out.println("Press Up/Down Button, As your Requirement?\t");
+		int newV=xyz.nextInt();
+		
+		if(newV<=100)
+		{
+			String result=(currentV>newV)?(currentV-newV)+" Times Pressing Down Button.":(newV-currentV)+" Times Pressing Up Button.";
+			System.out.println(result);
+		}
+		else
+		{System.out.println("Limit Upto 100!");}
+		}
+		else
+	{System.out.println("Limit Upto 100!");}
+	}
+	
+}
+
+___________________________________________________________________________________________________________
+Q3   :   Pooja ATM APP
+-----------------------------------------------------------------------------------------------------------
+Code	:
+import java.util.*;
+public class PoojaATMApp
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner(System.in);
+		System.out.println("How Many  Balance Available in Account?\t");
+		int avail_b=xyz.nextInt();
+		System.out.println("Enter Amount of Withrow Money?\t");
+		int with_Money=xyz.nextInt();
+		if(avail_b>with_Money)
+		{
+			if(avail_b-0.50f > with_Money && with_Money%500==0)
+			{
+				System.out.println("Available Balance : "+avail_b);
+				System.out.println("Withrow Amount : "+with_Money);
+				System.out.println("Remaining Balance In Account : "+((avail_b-with_Money)-0.50f));
+			}
+			else
+			{
+				System.out.println("You Can't Withrow Money Below 500!");
+			}
+		}
+		else
+		{
+			System.out.println("You Can not Withrow Money, Less Available Balance!");
+		}
+	}
+}
+
+___________________________________________________________________________________________________________
+Q4   :  Ezio Manipulate
+---------------------------------------------------------------------------------------------------------
+CODE  :
+import java.util.*;
+public class EzioManipulateQ4
+{ 
+	public static void main(String args[])
+	{
+		Scanner xyz =new Scanner (System.in);
+		System.out.println("Enter Ezio Ability of Manipulate Guards?\t");
+		int ezio=xyz.nextInt();
+		
+		System.out.println("How Many Guards, For Manipulate?\t");
+		int guard=xyz.nextInt();
+		
+		String result=(ezio==guard)?"Yes":(ezio>guard)?"Yes":"Noo";
+			System.out.println(result);
+	}
+}
+
+________________________________________________________________________________________________________________
+Q5   :  Credit Score
+---------------------------------------------------------------------------------------------------------------
+CODE :
+import java.util.*;
+public class CreditScore
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner(System.in);
+		System.out.println("Enter Credite Score?\t");
+		int score=xyz.nextInt();
+		if(score<=100)
+		{
+			String result=(score>=750)?"Yess":"NOO";
+			System.out.println(result);
+		}
+		else
+		{
+			System.out.println("Limit Upto 1000!");
+		}
+	}
+}
+
+_______________________________________________________________________________________________________________________
+Q6   :  Friend Group Course
+------------------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class FriendGroupCourseQ6
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner (System.in);
+		System.out.println("Enter Number of Member In Group?\t");
+		int member=xyz.nextInt();
+		System.out.println("Enter Couse Member Capacity?\t");
+		int course=xyz.nextInt();
+		System.out.println("Enter Number of Already Member In Course");
+		int already=xyz.nextInt();
+		if(course>=already)
+		{
+			int capacity=course-already;
+			String result=(capacity>=member)?"YESS":"NOO";
+			System.out.println(result);
+		}
+		else
+		{
+			System.out.println("Coursse Capacity Only : "+course+" Member.");
+			System.out.println("Invalid!");
+			
+		}
+	}
+}
+
+_____________________________________________________________________________________________________________________________________
+Q7
+   :
+-------------------------------------------------------------------------------------------------------------------------------------
+Code   :
+import java.util.*;
+public class Chef_IQ_Q7
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner (System.in);
+		System.out.println("Enter Chef's IQ?\t");
+		int chef=xyz.nextInt();
+		
+		String result=((chef+7)>=170)?"YESS":"NOO";
+		System.out.println(result);
+	}
+}
+
+________________________________________________________________________________________________________________________________________
+Q8
+-------------------------------------------------------------------------------------------------------------------------------------------
+CODE	:
+import java.util.*;
+public class Q8
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner (System.in);
+		System.out.println("Enter Any Character?\t");
+		char ch=xyz.nextLine().charAt(0);
+		if(ch>='a' && ch<='z' || ch>='A' && ch<='Z')
+		{
+			if(ch=='a' || ch=='e' || ch=='i' || ch=='o'  || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O'  || ch=='U')
+			{
+				System.out.println("Vovels.");
+			}
+			else
+			{
+				System.out.println("Consonent!");
+			} 
+		}
+		else
+		{
+			System.out.println("Invalid Input!");
+		}
+	}
+}
+
+___________________________________________________________________________________________________________________________________________
+Q9
+------------------------------------------------------------------------------------------------------------------------------------------
+CODE	:
+import java.util.*;
+public class Q9
+{
+	public static void main(String args[])
+	{
+		Scanner xyz=new Scanner(System.in);
+		System.out.println("Enter Angles of Triangle?\t");
+		System.out.println("Angle 1,2 and 3 Respectively Enter:\t");
+		int angel1=xyz.nextInt();
+		int angel2=xyz.nextInt();
+		int angel3=xyz.nextInt();
+		
+		String result=((angel1+angel2+angel3)==180)?"Valid":"Invalid";
+		System.out.println(result);
+	}
+}
